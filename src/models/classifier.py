@@ -56,7 +56,12 @@ class DNABERT2Classifier(nn.Module):
         
         # Extract sequence representation
         # Shape: (batch_size, sequence_length, hidden_size)
-        last_hidden_state = outputs.last_hidden_state
+        if isinstance(outputs, tuple):
+            last_hidden_state = outputs[0]
+        elif hasattr(outputs, "last_hidden_state"):
+            last_hidden_state = outputs.last_hidden_state
+        else:
+            last_hidden_state = outputs["last_hidden_state"]
         
         if self.pooling == "mean":
             # Masked average pooling

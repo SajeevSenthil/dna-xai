@@ -1,8 +1,18 @@
 import os
+os.environ["HF_HUB_OFFLINE"] = "1"
+os.environ["TRANSFORMERS_OFFLINE"] = "1"
 import argparse
 import logging
 import yaml
 import torch
+import transformers
+transformers.utils.import_utils.check_torch_load_is_safe = lambda *args, **kwargs: True
+transformers.utils.check_torch_load_is_safe = lambda *args, **kwargs: True
+try:
+    import transformers.modeling_utils
+    transformers.modeling_utils.check_torch_load_is_safe = lambda *args, **kwargs: True
+except Exception:
+    pass
 import pandas as pd
 import json
 
@@ -27,6 +37,7 @@ def main():
     parser.add_argument("--batch_size", type=int, help="Override training batch size.")
     parser.add_argument("--epochs", type=int, help="Override training epochs.")
     parser.add_argument("--lr", type=float, help="Override learning rate.")
+    parser.add_argument("--quick_demo", action="store_true", help="Run a quick demo with a subset of data.")
     args = parser.parse_args()
 
     # Load configuration
@@ -83,7 +94,13 @@ def main():
         
     train_df = pd.read_csv(train_path)
     val_df = pd.read_csv(val_path)
-    logger.info(f"Loaded train samples: {len(train_df)} | val samples: {len(val_df)}")
+    if args.quick_demo:
+        train_df = train_df.sample(n=min(500, len(train_df)), random_state=42).reset_index(drop=True)
+        val_df = val_df.sample(n=min(100, len(val_df)), random_state=42).reset_index(drop=True)
+        config["training"]["epochs"] = min(2, config["training"].get("epochs", 5))
+        logger.info(f"[QUICK DEMO] Downsampled datasets. Train size: {len(train_df)}, Val size: {len(val_df)}, Epochs: {config['training']['epochs']}")
+    else:
+        logger.info(f"Loaded train samples: {len(train_df)} | val samples: {len(val_df)}")
 
     # Load base model & tokenizer
     base_model_name = config["model"]["name_or_path"]

@@ -1,0 +1,5 @@
+[2026-08-14 21:39:51] INFO [root:32] Logging configured successfully.
+[2026-08-14 21:39:51] INFO [__main__:48] Aggregating results for task: PROMOTER...
+[2026-08-14 21:39:51] WARNING [__main__:99] No results found for method FULL at expected paths.
+[2026-08-14 21:39:51] WARNING [__main__:99] No results found for method ADAPTERS at expected paths.
+[2026-08-14 21:39:51] INFO [src.training.experiment:67] Comparative report written successfully to: results/tables\comparison_promoter.md

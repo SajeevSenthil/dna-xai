@@ -123,5 +123,5 @@ def compute_lime_explanations(
     """
     Wrapper function to compute LIME explanations.
     """
-    explainer = DNASimeExplainer(model, tokenizer, device, max_length)
+    explainer = DNALimeExplainer(model, tokenizer, device, max_length)
     return explainer.explain_sequence(sequence, num_perturbations=num_perturbations)

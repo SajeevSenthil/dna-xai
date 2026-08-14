@@ -1,0 +1,115 @@
+[2026-08-14 21:30:55] INFO [root:32] Logging configured successfully.
+[2026-08-14 21:30:56] INFO [src.models.dnabert:25] Loading DNABERT-2 from: quietflamingo/dnabert2-no-flashattention
+[2026-08-14 21:30:56] INFO [src.models.dnabert:47] DNABERT-2 model and tokenizer loaded successfully.
+[2026-08-14 21:30:56] INFO [src.models.peft_models:119] LoRA wrapper applied to encoder. Target modules: ['Wqkv'], rank=8
+[2026-08-14 21:30:56] INFO [src.models.classifier:37] Initialized DNABERT2Classifier with pooling=mean, dropout=0.1, hidden_size=768, num_labels=2
+[2026-08-14 21:30:57] INFO [__main__:78] Analyzing custom sequence: ATCGATCGATCGATCGATCGATCGATCGATCGATCGATCGATCGATCGATCGATCGATCGATCGATCGATCGATCG
+[2026-08-14 21:31:00] INFO [__main__:114] Model prediction: Non-Promoter (Confidence: 53.0%)
+[2026-08-14 21:31:00] INFO [src.explainability.shap_explainer:93] Running SHAP KernelExplainer on sequence of length 76 (nsamples=100)...
+[2026-08-14 21:31:00] INFO [shap:472] num_full_subsets = 0
+[2026-08-14 21:31:00] INFO [shap:483] remaining_weight_vector = array([0.20564142, 0.10421018, 0.07042514, 0.05355245, 0.04344537,
+       0.03672168, 0.0319319 , 0.0283513 , 0.02557729, 0.02336834,
+       0.02157078, 0.02008217, 0.01883163, 0.01776856, 0.01685585,
+       0.01606574, 0.01537698, 0.01477309, 0.0142411 , 0.01377063,
+       0.01335334, 0.01298241, 0.01265226, 0.01235826, 0.01209655,
+       0.01186393, 0.01165768, 0.01147553, 0.01131556, 0.01117616,
+       0.01105599, 0.01095391, 0.010869  , 0.01080049, 0.01074781,
+       0.01071049, 0.01068822, 0.01068082])
+[2026-08-14 21:31:00] INFO [shap:484] num_paired_subset_sizes = 37
+[2026-08-14 21:31:00] INFO [shap:523] weight_left = np.float64(1.0)
+[2026-08-14 21:31:01] INFO [shap:705] np.sum(w_aug) = np.float64(76.0)
+[2026-08-14 21:31:01] INFO [shap:706] np.sum(self.kernelWeights) = np.float64(0.9999999999999999)
+[2026-08-14 21:31:01] INFO [shap:787] phi = array([ 0.        ,  0.        ,  0.00204624,  0.        ,  0.        ,
+        0.        ,  0.        ,  0.        ,  0.        ,  0.        ,
+        0.        ,  0.        ,  0.01177471,  0.        ,  0.        ,
+        0.        ,  0.        , -0.01291424,  0.        ,  0.        ,
+        0.        ,  0.        ,  0.        ,  0.        ,  0.        ,
+        0.        ,  0.        ,  0.        ,  0.        ,  0.        ,
+        0.        ,  0.        ,  0.        ,  0.        ,  0.        ,
+        0.        ,  0.00903014,  0.        ,  0.        ,  0.00753693,
+        0.        ,  0.        ,  0.        ,  0.        ,  0.01209824,
+        0.        ,  0.        ,  0.        ,  0.        ,  0.        ,
+        0.        ,  0.00947327,  0.        ,  0.        , -0.01442918,
+        0.        , -0.0398644 ,  0.        ,  0.        ,  0.        ,
+        0.        ,  0.        ,  0.        ,  0.        ,  0.        ,
+        0.        ,  0.        ,  0.        ,  0.        ,  0.        ,
+        0.        ,  0.        ,  0.01098136,  0.        ,  0.        ,
+        0.        ])
+[2026-08-14 21:32:31] INFO [root:32] Logging configured successfully.
+[2026-08-14 21:32:32] INFO [src.models.dnabert:25] Loading DNABERT-2 from: quietflamingo/dnabert2-no-flashattention
+[2026-08-14 21:32:32] INFO [src.models.dnabert:47] DNABERT-2 model and tokenizer loaded successfully.
+[2026-08-14 21:32:32] INFO [src.models.peft_models:119] LoRA wrapper applied to encoder. Target modules: ['Wqkv'], rank=8
+[2026-08-14 21:32:32] INFO [src.models.classifier:37] Initialized DNABERT2Classifier with pooling=mean, dropout=0.1, hidden_size=768, num_labels=2
+[2026-08-14 21:32:33] INFO [__main__:78] Analyzing custom sequence: ATCGATCGATCGATCGATCGATCGATCGATCGATCGATCGATCGATCGATCGATCGATCGATCGATCGATCGATCG
+[2026-08-14 21:32:35] INFO [__main__:114] Model prediction: Non-Promoter (Confidence: 53.0%)
+[2026-08-14 21:32:35] INFO [src.explainability.shap_explainer:93] Running SHAP KernelExplainer on sequence of length 76 (nsamples=100)...
+[2026-08-14 21:32:35] INFO [shap:472] num_full_subsets = 0
+[2026-08-14 21:32:35] INFO [shap:483] remaining_weight_vector = array([0.20564142, 0.10421018, 0.07042514, 0.05355245, 0.04344537,
+       0.03672168, 0.0319319 , 0.0283513 , 0.02557729, 0.02336834,
+       0.02157078, 0.02008217, 0.01883163, 0.01776856, 0.01685585,
+       0.01606574, 0.01537698, 0.01477309, 0.0142411 , 0.01377063,
+       0.01335334, 0.01298241, 0.01265226, 0.01235826, 0.01209655,
+       0.01186393, 0.01165768, 0.01147553, 0.01131556, 0.01117616,
+       0.01105599, 0.01095391, 0.010869  , 0.01080049, 0.01074781,
+       0.01071049, 0.01068822, 0.01068082])
+[2026-08-14 21:32:35] INFO [shap:484] num_paired_subset_sizes = 37
+[2026-08-14 21:32:35] INFO [shap:523] weight_left = np.float64(1.0)
+[2026-08-14 21:32:37] INFO [shap:705] np.sum(w_aug) = np.float64(76.0)
+[2026-08-14 21:32:37] INFO [shap:706] np.sum(self.kernelWeights) = np.float64(0.9999999999999998)
+[2026-08-14 21:32:37] INFO [shap:787] phi = array([ 0.        ,  0.        ,  0.        ,  0.        ,  0.        ,
+        0.        ,  0.        ,  0.        ,  0.        ,  0.        ,
+       -0.02163187,  0.        ,  0.        ,  0.        ,  0.        ,
+        0.        ,  0.        ,  0.        ,  0.        ,  0.        ,
+        0.        ,  0.00699425,  0.        ,  0.        ,  0.        ,
+        0.        ,  0.        ,  0.        ,  0.        ,  0.        ,
+        0.        ,  0.        ,  0.        ,  0.        ,  0.        ,
+        0.        , -0.0129542 , -0.00535183,  0.        ,  0.        ,
+        0.        ,  0.        ,  0.        ,  0.        ,  0.        ,
+        0.0123597 ,  0.        ,  0.        ,  0.        ,  0.0079566 ,
+        0.        ,  0.01522153,  0.        ,  0.01113855,  0.        ,
+        0.        ,  0.        ,  0.        ,  0.        ,  0.        ,
+       -0.02236359,  0.        ,  0.        ,  0.        ,  0.        ,
+        0.        ,  0.        ,  0.00436395,  0.        ,  0.        ,
+        0.        ,  0.        ,  0.        ,  0.        ,  0.        ,
+        0.        ])
+[2026-08-14 21:32:37] INFO [__main__:201] Explanation report saved to: results/explanations\promoter_lora_custom_report.txt
+[2026-08-14 21:32:37] INFO [__main__:202] Explanation data saved to: results/explanations\promoter_lora_custom_data.json
+[2026-08-14 21:38:10] INFO [root:32] Logging configured successfully.
+[2026-08-14 21:38:10] INFO [src.models.dnabert:25] Loading DNABERT-2 from: quietflamingo/dnabert2-no-flashattention
+[2026-08-14 21:38:11] INFO [src.models.dnabert:47] DNABERT-2 model and tokenizer loaded successfully.
+[2026-08-14 21:38:13] INFO [src.models.peft_models:167] QLoRA 4-bit wrapper applied to encoder. Rank=8
+[2026-08-14 21:38:13] INFO [src.models.classifier:37] Initialized DNABERT2Classifier with pooling=mean, dropout=0.1, hidden_size=768, num_labels=2
+[2026-08-14 21:38:13] INFO [__main__:78] Analyzing custom sequence: ATCGATCGATCGATCGATCGATCGATCGATCGATCGATCGATCGATCGATCGATCGATCGATCGATCGATCGATCG
+[2026-08-14 21:38:16] INFO [__main__:114] Model prediction: Non-Promoter (Confidence: 53.3%)
+[2026-08-14 21:38:16] INFO [src.explainability.shap_explainer:93] Running SHAP KernelExplainer on sequence of length 76 (nsamples=100)...
+[2026-08-14 21:38:16] INFO [shap:472] num_full_subsets = 0
+[2026-08-14 21:38:16] INFO [shap:483] remaining_weight_vector = array([0.20564142, 0.10421018, 0.07042514, 0.05355245, 0.04344537,
+       0.03672168, 0.0319319 , 0.0283513 , 0.02557729, 0.02336834,
+       0.02157078, 0.02008217, 0.01883163, 0.01776856, 0.01685585,
+       0.01606574, 0.01537698, 0.01477309, 0.0142411 , 0.01377063,
+       0.01335334, 0.01298241, 0.01265226, 0.01235826, 0.01209655,
+       0.01186393, 0.01165768, 0.01147553, 0.01131556, 0.01117616,
+       0.01105599, 0.01095391, 0.010869  , 0.01080049, 0.01074781,
+       0.01071049, 0.01068822, 0.01068082])
+[2026-08-14 21:38:16] INFO [shap:484] num_paired_subset_sizes = 37
+[2026-08-14 21:38:16] INFO [shap:523] weight_left = np.float64(1.0)
+[2026-08-14 21:38:16] INFO [shap:705] np.sum(w_aug) = np.float64(76.00000000000001)
+[2026-08-14 21:38:16] INFO [shap:706] np.sum(self.kernelWeights) = np.float64(0.9999999999999999)
+[2026-08-14 21:38:16] INFO [shap:787] phi = array([ 0.        ,  0.        ,  0.        ,  0.        ,  0.        ,
+        0.        ,  0.        ,  0.        ,  0.        ,  0.        ,
+        0.        ,  0.        ,  0.        ,  0.        ,  0.        ,
+        0.        ,  0.        ,  0.        ,  0.        ,  0.        ,
+        0.        ,  0.        , -0.0032759 ,  0.        , -0.00336281,
+        0.        , -0.00674089,  0.        ,  0.        , -0.00401303,
+        0.        ,  0.        , -0.00531814,  0.        ,  0.        ,
+       -0.00528727, -0.00220629,  0.        ,  0.        ,  0.        ,
+        0.        ,  0.        , -0.00449462,  0.        ,  0.        ,
+        0.        ,  0.        ,  0.        ,  0.        ,  0.        ,
+        0.        ,  0.        ,  0.        ,  0.        ,  0.        ,
+        0.        ,  0.        , -0.00363052,  0.        ,  0.        ,
+        0.        ,  0.        ,  0.        , -0.00725091,  0.        ,
+        0.        ,  0.        ,  0.        ,  0.        ,  0.        ,
+        0.        ,  0.        ,  0.        ,  0.        ,  0.        ,
+        0.        ])
+[2026-08-14 21:38:17] INFO [__main__:201] Explanation report saved to: results/explanations\promoter_qlora_custom_report.txt
+[2026-08-14 21:38:17] INFO [__main__:202] Explanation data saved to: results/explanations\promoter_qlora_custom_data.json

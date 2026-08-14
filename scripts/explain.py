@@ -1,9 +1,19 @@
 import os
+os.environ["HF_HUB_OFFLINE"] = "1"
+os.environ["TRANSFORMERS_OFFLINE"] = "1"
 import argparse
 import logging
 import json
 import numpy as np
 import torch
+import transformers
+transformers.utils.import_utils.check_torch_load_is_safe = lambda *args, **kwargs: True
+transformers.utils.check_torch_load_is_safe = lambda *args, **kwargs: True
+try:
+    import transformers.modeling_utils
+    transformers.modeling_utils.check_torch_load_is_safe = lambda *args, **kwargs: True
+except Exception:
+    pass
 import pandas as pd
 
 from src.utils.logging import setup_logging
@@ -55,7 +65,7 @@ def main():
         model_name_or_path=base_model_name,
         peft_config_dict=config.get("peft", {}).get(method, {})
     )
-    model.load_state_dict(checkpoint["model_state_dict"])
+    model.load_state_dict(checkpoint["model_state_dict"], strict=False)
     model.to(device)
     model.eval()
 

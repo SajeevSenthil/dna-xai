@@ -4,7 +4,7 @@ device: "cuda"  # Will fallback to cpu automatically if not available
 
 # Model Configurations
 model:
-  name_or_path: "zhihan1996/DNABERT-2-117M"
+  name_or_path: "quietflamingo/dnabert2-no-flashattention"
   max_length: 128  # DNA sequence lengths are 70 (promoter) and 101 (tf), so 128 is plenty
 
 # Dataset Configurations
@@ -36,15 +36,13 @@ peft:
     alpha: 16
     dropout: 0.1
     target_modules:
-      - "query"
-      - "value"
+      - "Wqkv"
   qlora:
     r: 8
     alpha: 16
     dropout: 0.1
     target_modules:
-      - "query"
-      - "value"
+      - "Wqkv"
     load_in_4bit: true
     bnb_4bit_compute_dtype: "float16"
     bnb_4bit_quant_type: "nf4"

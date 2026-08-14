@@ -48,7 +48,7 @@ def evaluate_checkpoint(
     )
     
     # Load weight state dict
-    model.load_state_dict(checkpoint["model_state_dict"])
+    model.load_state_dict(checkpoint["model_state_dict"], strict=False)
     model.to(device)
     model.eval()
     

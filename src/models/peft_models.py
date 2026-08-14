@@ -146,7 +146,7 @@ def get_peft_classifier(
         )
         
         # Prepare model for k-bit training
-        encoder = prepare_model_for_kbit_training(encoder)
+        encoder = prepare_model_for_kbit_training(encoder, use_gradient_checkpointing=False)
         
         # Configure LoRA
         r = peft_config_dict.get("r", 8)

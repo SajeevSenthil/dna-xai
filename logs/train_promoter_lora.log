@@ -1,0 +1,113 @@
+[2026-08-14 15:07:02] INFO [root:32] Logging configured successfully.
+[2026-08-14 15:07:02] INFO [__main__:62] Starting training run: Task=PROMOTER, Method=LORA
+[2026-08-14 15:07:03] INFO [src.utils.seed:29] Random seed set to 42 (reproducibility enabled).
+[2026-08-14 15:07:03] INFO [__main__:73] Using compute device: cuda
+[2026-08-14 15:07:03] INFO [__main__:86] Loaded train samples: 47148 | val samples: 5893
+[2026-08-14 15:07:03] INFO [src.models.dnabert:12] Loading DNABERT-2 from: zhihan1996/DNABERT-2-117M
+[2026-08-14 15:07:17] ERROR [src.models.dnabert:31] Failed to load model from zhihan1996/DNABERT-2-117M: This modeling file requires the following packages that were not found in your environment: triton. Run `pip install triton`
+[2026-08-14 15:09:55] INFO [root:32] Logging configured successfully.
+[2026-08-14 15:09:55] INFO [__main__:62] Starting training run: Task=PROMOTER, Method=LORA
+[2026-08-14 15:09:55] INFO [src.utils.seed:29] Random seed set to 42 (reproducibility enabled).
+[2026-08-14 15:09:55] INFO [__main__:73] Using compute device: cuda
+[2026-08-14 15:09:55] INFO [__main__:86] Loaded train samples: 47148 | val samples: 5893
+[2026-08-14 15:09:55] INFO [src.models.dnabert:12] Loading DNABERT-2 from: quietflamingo/dnabert2-no-flashattention
+[2026-08-14 15:10:09] WARNING [huggingface_hub.file_download:1732] Xet Storage is enabled for this repo, but the 'hf_xet' package is not installed. Falling back to regular HTTP download. For better performance, install the package with: `pip install huggingface_hub[hf_xet]` or `pip install hf_xet`
+[2026-08-14 15:20:21] ERROR [src.models.dnabert:31] Failed to load model from quietflamingo/dnabert2-no-flashattention: Due to a serious vulnerability issue in `torch.load`, even with `weights_only=True`, we now require users to upgrade torch to at least v2.6 in order to use the function. This version restriction does not apply when loading files with safetensors.
+See the vulnerability report here https://nvd.nist.gov/vuln/detail/CVE-2025-32434
+[2026-08-14 15:20:24] WARNING [huggingface_hub.file_download:1732] Xet Storage is enabled for this repo, but the 'hf_xet' package is not installed. Falling back to regular HTTP download. For better performance, install the package with: `pip install huggingface_hub[hf_xet]` or `pip install hf_xet`
+[2026-08-14 17:44:00] INFO [root:32] Logging configured successfully.
+[2026-08-14 17:44:00] INFO [__main__:64] Starting training run: Task=PROMOTER, Method=LORA
+[2026-08-14 17:44:00] INFO [src.utils.seed:29] Random seed set to 42 (reproducibility enabled).
+[2026-08-14 17:44:00] INFO [__main__:75] Using compute device: cuda
+[2026-08-14 17:44:00] INFO [__main__:88] Loaded train samples: 47148 | val samples: 5893
+[2026-08-14 17:44:00] INFO [src.models.dnabert:15] Loading DNABERT-2 from: quietflamingo/dnabert2-no-flashattention
+[2026-08-14 17:44:03] ERROR [src.models.dnabert:34] Failed to load model from quietflamingo/dnabert2-no-flashattention: Due to a serious vulnerability issue in `torch.load`, even with `weights_only=True`, we now require users to upgrade torch to at least v2.6 in order to use the function. This version restriction does not apply when loading files with safetensors.
+See the vulnerability report here https://nvd.nist.gov/vuln/detail/CVE-2025-32434
+[2026-08-14 17:49:27] INFO [root:32] Logging configured successfully.
+[2026-08-14 17:49:27] INFO [__main__:70] Starting training run: Task=PROMOTER, Method=LORA
+[2026-08-14 17:49:27] INFO [src.utils.seed:29] Random seed set to 42 (reproducibility enabled).
+[2026-08-14 17:49:27] INFO [__main__:81] Using compute device: cuda
+[2026-08-14 17:49:28] INFO [__main__:94] Loaded train samples: 47148 | val samples: 5893
+[2026-08-14 17:49:28] INFO [src.models.dnabert:21] Loading DNABERT-2 from: quietflamingo/dnabert2-no-flashattention
+[2026-08-14 17:49:40] INFO [src.models.dnabert:43] DNABERT-2 model and tokenizer loaded successfully.
+[2026-08-14 19:14:06] INFO [root:32] Logging configured successfully.
+[2026-08-14 19:14:06] INFO [__main__:70] Starting training run: Task=PROMOTER, Method=LORA
+[2026-08-14 19:14:06] INFO [src.utils.seed:29] Random seed set to 42 (reproducibility enabled).
+[2026-08-14 19:14:06] INFO [__main__:81] Using compute device: cuda
+[2026-08-14 19:14:06] INFO [__main__:94] Loaded train samples: 47148 | val samples: 5893
+[2026-08-14 19:14:06] INFO [src.models.dnabert:21] Loading DNABERT-2 from: quietflamingo/dnabert2-no-flashattention
+[2026-08-14 19:14:11] INFO [src.models.dnabert:43] DNABERT-2 model and tokenizer loaded successfully.
+[2026-08-14 19:14:14] INFO [src.models.peft_models:119] LoRA wrapper applied to encoder. Target modules: ['Wqkv'], rank=8
+[2026-08-14 19:14:14] INFO [src.models.classifier:37] Initialized DNABERT2Classifier with pooling=mean, dropout=0.1, hidden_size=768, num_labels=2
+[2026-08-14 19:14:15] INFO [src.training.train:53] Trainer initialization:
+[2026-08-14 19:14:15] INFO [src.training.train:54]   Total parameters:     117,364,994
+[2026-08-14 19:14:15] INFO [src.training.train:55]   Trainable parameters: 296,450 (0.253%)
+[2026-08-14 19:14:15] INFO [src.training.train:174] Starting training loop...
+[2026-08-14 19:20:17] INFO [root:32] Logging configured successfully.
+[2026-08-14 19:20:17] INFO [__main__:70] Starting training run: Task=PROMOTER, Method=LORA
+[2026-08-14 19:20:17] INFO [src.utils.seed:29] Random seed set to 42 (reproducibility enabled).
+[2026-08-14 19:20:17] INFO [__main__:81] Using compute device: cuda
+[2026-08-14 19:20:17] INFO [__main__:94] Loaded train samples: 47148 | val samples: 5893
+[2026-08-14 19:20:17] INFO [src.models.dnabert:21] Loading DNABERT-2 from: quietflamingo/dnabert2-no-flashattention
+[2026-08-14 19:20:26] INFO [src.models.dnabert:43] DNABERT-2 model and tokenizer loaded successfully.
+[2026-08-14 19:20:44] WARNING [huggingface_hub.utils._http:321] '(ReadTimeoutError("HTTPSConnectionPool(host='huggingface.co', port=443): Read timed out. (read timeout=10)"), '(Request ID: 20538f28-744b-42bc-a57d-55111fb7647c)')' thrown while requesting HEAD https://huggingface.co/quietflamingo/dnabert2-no-flashattention/resolve/main/bert_layers.py
+[2026-08-14 19:20:44] WARNING [huggingface_hub.utils._http:330] Retrying in 1s [Retry 1/5].
+[2026-08-14 19:20:57] WARNING [huggingface_hub.utils._http:321] '(MaxRetryError('HTTPSConnectionPool(host=\'huggingface.co\', port=443): Max retries exceeded with url: /quietflamingo/dnabert2-no-flashattention/resolve/main/bert_layers.py (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x000002AD66DB2AE0>: Failed to resolve \'huggingface.co\' ([Errno 11001] getaddrinfo failed)"))'), '(Request ID: 6ee5aa9b-7f28-4c97-86f8-e22376816c8a)')' thrown while requesting HEAD https://huggingface.co/quietflamingo/dnabert2-no-flashattention/resolve/main/bert_layers.py
+[2026-08-14 19:20:57] WARNING [huggingface_hub.utils._http:330] Retrying in 2s [Retry 2/5].
+[2026-08-14 19:21:12] WARNING [huggingface_hub.utils._http:321] '(MaxRetryError('HTTPSConnectionPool(host=\'huggingface.co\', port=443): Max retries exceeded with url: /quietflamingo/dnabert2-no-flashattention/resolve/main/bert_layers.py (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x000002AD66DB25A0>: Failed to resolve \'huggingface.co\' ([Errno 11001] getaddrinfo failed)"))'), '(Request ID: 415649ce-30a3-4d2c-9703-a1b54a98b0f6)')' thrown while requesting HEAD https://huggingface.co/quietflamingo/dnabert2-no-flashattention/resolve/main/bert_layers.py
+[2026-08-14 19:21:12] WARNING [huggingface_hub.utils._http:330] Retrying in 4s [Retry 3/5].
+[2026-08-14 19:21:16] WARNING [huggingface_hub.utils._http:321] '(MaxRetryError('HTTPSConnectionPool(host=\'huggingface.co\', port=443): Max retries exceeded with url: /quietflamingo/dnabert2-no-flashattention/resolve/main/bert_layers.py (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x000002AD66DB2450>: Failed to resolve \'huggingface.co\' ([Errno 11001] getaddrinfo failed)"))'), '(Request ID: a3c0e559-f913-4211-8bb3-3e7d0c03e5f9)')' thrown while requesting HEAD https://huggingface.co/quietflamingo/dnabert2-no-flashattention/resolve/main/bert_layers.py
+[2026-08-14 19:21:16] WARNING [huggingface_hub.utils._http:330] Retrying in 8s [Retry 4/5].
+[2026-08-14 19:21:24] WARNING [huggingface_hub.utils._http:321] '(MaxRetryError('HTTPSConnectionPool(host=\'huggingface.co\', port=443): Max retries exceeded with url: /quietflamingo/dnabert2-no-flashattention/resolve/main/bert_layers.py (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x000002AD66DB1A00>: Failed to resolve \'huggingface.co\' ([Errno 11001] getaddrinfo failed)"))'), '(Request ID: c7d249ef-4a1e-4a16-9b50-9953c5f70702)')' thrown while requesting HEAD https://huggingface.co/quietflamingo/dnabert2-no-flashattention/resolve/main/bert_layers.py
+[2026-08-14 19:21:24] WARNING [huggingface_hub.utils._http:330] Retrying in 8s [Retry 5/5].
+[2026-08-14 19:21:32] WARNING [huggingface_hub.utils._http:321] '(MaxRetryError('HTTPSConnectionPool(host=\'huggingface.co\', port=443): Max retries exceeded with url: /quietflamingo/dnabert2-no-flashattention/resolve/main/bert_layers.py (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x000002AD66DB07A0>: Failed to resolve \'huggingface.co\' ([Errno 11001] getaddrinfo failed)"))'), '(Request ID: b03921fd-8653-4654-993a-facfb23d7e3c)')' thrown while requesting HEAD https://huggingface.co/quietflamingo/dnabert2-no-flashattention/resolve/main/bert_layers.py
+[2026-08-14 19:21:32] INFO [src.models.peft_models:119] LoRA wrapper applied to encoder. Target modules: ['Wqkv'], rank=8
+[2026-08-14 19:21:32] INFO [src.models.classifier:37] Initialized DNABERT2Classifier with pooling=mean, dropout=0.1, hidden_size=768, num_labels=2
+[2026-08-14 19:21:34] INFO [src.training.train:53] Trainer initialization:
+[2026-08-14 19:21:34] INFO [src.training.train:54]   Total parameters:     117,364,994
+[2026-08-14 19:21:34] INFO [src.training.train:55]   Trainable parameters: 296,450 (0.253%)
+[2026-08-14 19:21:34] INFO [src.training.train:174] Starting training loop...
+[2026-08-14 19:28:35] INFO [root:32] Logging configured successfully.
+[2026-08-14 19:28:35] INFO [__main__:72] Starting training run: Task=PROMOTER, Method=LORA
+[2026-08-14 19:28:35] INFO [src.utils.seed:29] Random seed set to 42 (reproducibility enabled).
+[2026-08-14 19:28:35] INFO [__main__:83] Using compute device: cuda
+[2026-08-14 19:28:35] INFO [__main__:96] Loaded train samples: 47148 | val samples: 5893
+[2026-08-14 19:28:35] INFO [src.models.dnabert:25] Loading DNABERT-2 from: quietflamingo/dnabert2-no-flashattention
+[2026-08-14 19:28:36] INFO [src.models.dnabert:47] DNABERT-2 model and tokenizer loaded successfully.
+[2026-08-14 19:28:36] INFO [src.models.peft_models:119] LoRA wrapper applied to encoder. Target modules: ['Wqkv'], rank=8
+[2026-08-14 19:28:36] INFO [src.models.classifier:37] Initialized DNABERT2Classifier with pooling=mean, dropout=0.1, hidden_size=768, num_labels=2
+[2026-08-14 19:28:37] INFO [src.training.train:53] Trainer initialization:
+[2026-08-14 19:28:37] INFO [src.training.train:54]   Total parameters:     117,364,994
+[2026-08-14 19:28:37] INFO [src.training.train:55]   Trainable parameters: 296,450 (0.253%)
+[2026-08-14 19:28:37] INFO [src.training.train:174] Starting training loop...
+[2026-08-14 19:46:11] INFO [src.training.train:196] Epoch 01 completed in 1477.5s | Train Loss: 0.5525 | Val Loss: 0.4505 | Val F1: 0.7935 | Val AUROC: 0.8750 | Peak VRAM: 934.0 MB
+[2026-08-14 19:46:12] INFO [src.training.train:220]   => Saved new best model to experiments\promoter_lora.pt (Val F1: 0.7935)
+[2026-08-14 20:11:03] INFO [src.training.train:196] Epoch 02 completed in 1490.9s | Train Loss: 0.4501 | Val Loss: 0.4241 | Val F1: 0.7996 | Val AUROC: 0.8912 | Peak VRAM: 934.0 MB
+[2026-08-14 20:11:04] INFO [src.training.train:220]   => Saved new best model to experiments\promoter_lora.pt (Val F1: 0.7996)
+[2026-08-14 20:36:00] INFO [src.training.train:196] Epoch 03 completed in 1496.2s | Train Loss: 0.4339 | Val Loss: 0.4123 | Val F1: 0.8180 | Val AUROC: 0.8956 | Peak VRAM: 934.0 MB
+[2026-08-14 20:36:01] INFO [src.training.train:220]   => Saved new best model to experiments\promoter_lora.pt (Val F1: 0.8180)
+[2026-08-14 21:00:38] INFO [src.training.train:196] Epoch 04 completed in 1476.9s | Train Loss: 0.4244 | Val Loss: 0.4200 | Val F1: 0.8054 | Val AUROC: 0.8979 | Peak VRAM: 934.0 MB
+[2026-08-14 21:00:38] INFO [src.training.train:223]   => Validation F1 did not improve. (Patience: 1/3)
+[2026-08-14 21:03:51] INFO [root:32] Logging configured successfully.
+[2026-08-14 21:03:51] INFO [__main__:73] Starting training run: Task=PROMOTER, Method=LORA
+[2026-08-14 21:03:51] INFO [src.utils.seed:29] Random seed set to 42 (reproducibility enabled).
+[2026-08-14 21:03:51] INFO [__main__:84] Using compute device: cuda
+[2026-08-14 21:03:51] INFO [__main__:101] [QUICK DEMO] Downsampled datasets. Train size: 500, Val size: 100, Epochs: 2
+[2026-08-14 21:03:51] INFO [src.models.dnabert:25] Loading DNABERT-2 from: quietflamingo/dnabert2-no-flashattention
+[2026-08-14 21:03:53] INFO [src.models.dnabert:47] DNABERT-2 model and tokenizer loaded successfully.
+[2026-08-14 21:03:54] INFO [src.models.peft_models:119] LoRA wrapper applied to encoder. Target modules: ['Wqkv'], rank=8
+[2026-08-14 21:03:54] INFO [src.models.classifier:37] Initialized DNABERT2Classifier with pooling=mean, dropout=0.1, hidden_size=768, num_labels=2
+[2026-08-14 21:03:55] INFO [src.training.train:53] Trainer initialization:
+[2026-08-14 21:03:55] INFO [src.training.train:54]   Total parameters:     117,364,994
+[2026-08-14 21:03:55] INFO [src.training.train:55]   Trainable parameters: 296,450 (0.253%)
+[2026-08-14 21:03:55] INFO [src.training.train:174] Starting training loop...
+[2026-08-14 21:05:11] INFO [src.training.train:196] Epoch 01 completed in 75.9s | Train Loss: 0.6916 | Val Loss: 0.6909 | Val F1: 0.6167 | Val AUROC: 0.5528 | Peak VRAM: 932.8 MB
+[2026-08-14 21:05:13] INFO [src.training.train:220]   => Saved new best model to experiments\promoter_lora.pt (Val F1: 0.6167)
+[2026-08-14 21:05:51] INFO [src.training.train:196] Epoch 02 completed in 38.6s | Train Loss: 0.6899 | Val Loss: 0.6905 | Val F1: 0.6393 | Val AUROC: 0.5613 | Peak VRAM: 932.8 MB
+[2026-08-14 21:05:56] INFO [src.training.train:220]   => Saved new best model to experiments\promoter_lora.pt (Val F1: 0.6393)
+[2026-08-14 21:05:56] INFO [src.training.train:231] Training finished in 120.9s. Best Epoch: 2 (Val F1: 0.6393)
+[2026-08-14 21:05:56] INFO [__main__:157] Training run completed. Efficiency statistics saved to: experiments\lora\promoter_efficiency_stats.json
+[2026-08-14 21:25:14] INFO [src.training.train:196] Epoch 05 completed in 1476.1s | Train Loss: 0.4168 | Val Loss: 0.3999 | Val F1: 0.8162 | Val AUROC: 0.9009 | Peak VRAM: 934.0 MB
+[2026-08-14 21:25:14] INFO [src.training.train:223]   => Validation F1 did not improve. (Patience: 2/3)
+[2026-08-14 21:25:14] INFO [src.training.train:231] Training finished in 7419.9s. Best Epoch: 3 (Val F1: 0.8180)
+[2026-08-14 21:25:14] INFO [__main__:148] Training run completed. Efficiency statistics saved to: experiments\lora\promoter_efficiency_stats.json

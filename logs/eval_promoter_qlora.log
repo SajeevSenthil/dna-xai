@@ -1,0 +1,30 @@
+[2026-08-14 21:34:50] INFO [root:32] Logging configured successfully.
+[2026-08-14 21:34:50] INFO [__main__:49] Starting evaluation of checkpoint: experiments/promoter_qlora.pt
+[2026-08-14 21:34:50] INFO [__main__:66] [QUICK DEMO] Downsampled test split size: 100
+[2026-08-14 21:34:50] INFO [src.models.dnabert:25] Loading DNABERT-2 from: quietflamingo/dnabert2-no-flashattention
+[2026-08-14 21:34:50] INFO [src.models.dnabert:47] DNABERT-2 model and tokenizer loaded successfully.
+[2026-08-14 21:34:50] INFO [src.training.evaluate:25] Loading checkpoint from: experiments/promoter_qlora.pt
+[2026-08-14 21:34:53] INFO [src.models.peft_models:167] QLoRA 4-bit wrapper applied to encoder. Rank=8
+[2026-08-14 21:34:53] INFO [src.models.classifier:37] Initialized DNABERT2Classifier with pooling=mean, dropout=0.1, hidden_size=768, num_labels=2
+[2026-08-14 21:35:54] INFO [root:32] Logging configured successfully.
+[2026-08-14 21:35:54] INFO [__main__:49] Starting evaluation of checkpoint: experiments/promoter_qlora.pt
+[2026-08-14 21:35:54] INFO [__main__:66] [QUICK DEMO] Downsampled test split size: 100
+[2026-08-14 21:35:54] INFO [src.models.dnabert:25] Loading DNABERT-2 from: quietflamingo/dnabert2-no-flashattention
+[2026-08-14 21:35:55] INFO [src.models.dnabert:47] DNABERT-2 model and tokenizer loaded successfully.
+[2026-08-14 21:35:55] INFO [src.training.evaluate:25] Loading checkpoint from: experiments/promoter_qlora.pt
+[2026-08-14 21:35:58] INFO [src.models.peft_models:167] QLoRA 4-bit wrapper applied to encoder. Rank=8
+[2026-08-14 21:35:58] INFO [src.models.classifier:37] Initialized DNABERT2Classifier with pooling=mean, dropout=0.1, hidden_size=768, num_labels=2
+[2026-08-14 21:35:58] INFO [src.training.evaluate:55] Loaded QLORA model trained for 1 epochs.
+[2026-08-14 21:36:00] INFO [src.training.evaluate:94] Evaluation complete for QLORA:
+[2026-08-14 21:36:00] INFO [src.training.evaluate:95]   Loss:      0.6910
+[2026-08-14 21:36:00] INFO [src.training.evaluate:96]   Accuracy:  0.5700
+[2026-08-14 21:36:00] INFO [src.training.evaluate:97]   Precision: 0.5185
+[2026-08-14 21:36:00] INFO [src.training.evaluate:98]   Recall:    0.6222
+[2026-08-14 21:36:00] INFO [src.training.evaluate:99]   F1:        0.5657
+[2026-08-14 21:36:00] INFO [src.training.evaluate:100]   AUROC:     0.5729
+[2026-08-14 21:36:00] INFO [src.training.evaluate:101]   Inference Latency: 23.04 ms/sample
+[2026-08-14 21:36:00] INFO [src.training.evaluate:108] Metrics saved to: results/plots\promoter_qlora_metrics.json
+[2026-08-14 21:36:01] INFO [src.training.evaluate:124] Evaluation plots saved to: results/plots
+[2026-08-14 21:36:01] INFO [__main__:105] Metrics saved to: results/metrics\promoter_qlora_metrics.json
+[2026-08-14 21:36:01] INFO [__main__:112] Prediction outputs saved to: results/metrics\promoter_qlora_predictions.json
+[2026-08-14 21:36:01] INFO [__main__:113] Evaluation pipeline execution complete.

@@ -1,0 +1,22 @@
+[2026-08-14 21:11:06] INFO [root:32] Logging configured successfully.
+[2026-08-14 21:11:06] INFO [__main__:49] Starting evaluation of checkpoint: experiments/promoter_lora.pt
+[2026-08-14 21:11:06] INFO [__main__:66] [QUICK DEMO] Downsampled test split size: 100
+[2026-08-14 21:11:06] INFO [src.models.dnabert:25] Loading DNABERT-2 from: quietflamingo/dnabert2-no-flashattention
+[2026-08-14 21:11:07] INFO [src.models.dnabert:47] DNABERT-2 model and tokenizer loaded successfully.
+[2026-08-14 21:11:07] INFO [src.training.evaluate:25] Loading checkpoint from: experiments/promoter_lora.pt
+[2026-08-14 21:11:08] INFO [src.models.peft_models:119] LoRA wrapper applied to encoder. Target modules: ['Wqkv'], rank=8
+[2026-08-14 21:11:08] INFO [src.models.classifier:37] Initialized DNABERT2Classifier with pooling=mean, dropout=0.1, hidden_size=768, num_labels=2
+[2026-08-14 21:11:09] INFO [src.training.evaluate:55] Loaded LORA model trained for 2 epochs.
+[2026-08-14 21:11:22] INFO [src.training.evaluate:94] Evaluation complete for LORA:
+[2026-08-14 21:11:22] INFO [src.training.evaluate:95]   Loss:      0.6896
+[2026-08-14 21:11:22] INFO [src.training.evaluate:96]   Accuracy:  0.5900
+[2026-08-14 21:11:22] INFO [src.training.evaluate:97]   Precision: 0.5370
+[2026-08-14 21:11:22] INFO [src.training.evaluate:98]   Recall:    0.6444
+[2026-08-14 21:11:22] INFO [src.training.evaluate:99]   F1:        0.5859
+[2026-08-14 21:11:22] INFO [src.training.evaluate:100]   AUROC:     0.6226
+[2026-08-14 21:11:22] INFO [src.training.evaluate:101]   Inference Latency: 132.27 ms/sample
+[2026-08-14 21:11:22] INFO [src.training.evaluate:108] Metrics saved to: results/plots\promoter_lora_metrics.json
+[2026-08-14 21:11:26] INFO [src.training.evaluate:124] Evaluation plots saved to: results/plots
+[2026-08-14 21:11:26] INFO [__main__:105] Metrics saved to: results/metrics\promoter_lora_metrics.json
+[2026-08-14 21:11:26] INFO [__main__:112] Prediction outputs saved to: results/metrics\promoter_lora_predictions.json
+[2026-08-14 21:11:26] INFO [__main__:113] Evaluation pipeline execution complete.

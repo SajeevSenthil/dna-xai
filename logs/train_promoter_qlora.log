@@ -1,0 +1,26 @@
+[2026-08-14 21:33:13] INFO [root:32] Logging configured successfully.
+[2026-08-14 21:33:13] INFO [__main__:73] Starting training run: Task=PROMOTER, Method=QLORA
+[2026-08-14 21:33:13] INFO [src.utils.seed:29] Random seed set to 42 (reproducibility enabled).
+[2026-08-14 21:33:13] INFO [__main__:84] Using compute device: cuda
+[2026-08-14 21:33:13] INFO [__main__:101] [QUICK DEMO] Downsampled datasets. Train size: 500, Val size: 100, Epochs: 2
+[2026-08-14 21:33:13] INFO [src.models.dnabert:25] Loading DNABERT-2 from: quietflamingo/dnabert2-no-flashattention
+[2026-08-14 21:33:13] INFO [src.models.dnabert:47] DNABERT-2 model and tokenizer loaded successfully.
+[2026-08-14 21:33:52] INFO [root:32] Logging configured successfully.
+[2026-08-14 21:33:52] INFO [__main__:73] Starting training run: Task=PROMOTER, Method=QLORA
+[2026-08-14 21:33:52] INFO [src.utils.seed:29] Random seed set to 42 (reproducibility enabled).
+[2026-08-14 21:33:52] INFO [__main__:84] Using compute device: cuda
+[2026-08-14 21:33:52] INFO [__main__:101] [QUICK DEMO] Downsampled datasets. Train size: 500, Val size: 100, Epochs: 2
+[2026-08-14 21:33:52] INFO [src.models.dnabert:25] Loading DNABERT-2 from: quietflamingo/dnabert2-no-flashattention
+[2026-08-14 21:33:52] INFO [src.models.dnabert:47] DNABERT-2 model and tokenizer loaded successfully.
+[2026-08-14 21:33:55] INFO [src.models.peft_models:167] QLoRA 4-bit wrapper applied to encoder. Rank=8
+[2026-08-14 21:33:55] INFO [src.models.classifier:37] Initialized DNABERT2Classifier with pooling=mean, dropout=0.1, hidden_size=768, num_labels=2
+[2026-08-14 21:33:55] INFO [src.training.train:53] Trainer initialization:
+[2026-08-14 21:33:55] INFO [src.training.train:54]   Total parameters:     60,741,890
+[2026-08-14 21:33:55] INFO [src.training.train:55]   Trainable parameters: 296,450 (0.488%)
+[2026-08-14 21:33:55] INFO [src.training.train:174] Starting training loop...
+[2026-08-14 21:34:08] INFO [src.training.train:196] Epoch 01 completed in 13.7s | Train Loss: 0.6924 | Val Loss: 0.6906 | Val F1: 0.6614 | Val AUROC: 0.5613 | Peak VRAM: 377.4 MB
+[2026-08-14 21:34:09] INFO [src.training.train:220]   => Saved new best model to experiments\promoter_qlora.pt (Val F1: 0.6614)
+[2026-08-14 21:34:21] INFO [src.training.train:196] Epoch 02 completed in 12.4s | Train Loss: 0.6894 | Val Loss: 0.6901 | Val F1: 0.6400 | Val AUROC: 0.5731 | Peak VRAM: 377.4 MB
+[2026-08-14 21:34:21] INFO [src.training.train:223]   => Validation F1 did not improve. (Patience: 1/3)
+[2026-08-14 21:34:21] INFO [src.training.train:231] Training finished in 26.3s. Best Epoch: 1 (Val F1: 0.6614)
+[2026-08-14 21:34:21] INFO [__main__:157] Training run completed. Efficiency statistics saved to: experiments\qlora\promoter_efficiency_stats.json
