@@ -1,0 +1,55 @@
+# General Configurations
+seed: 42
+device: "cuda"  # Will fallback to cpu automatically if not available
+
+# Model Configurations
+model:
+  name_or_path: "zhihan1996/DNABERT-2-117M"
+  max_length: 128  # DNA sequence lengths are 70 (promoter) and 101 (tf), so 128 is plenty
+
+# Dataset Configurations
+data:
+  promoter:
+    raw_dir: "project dataset/prom_core_all"
+    processed_dir: "data/processed/promoter"
+  tf:
+    raw_dir: "project dataset/tf"
+    processed_dir: "data/processed/tf"
+  val_split: 0.1
+  test_split: 0.1
+
+# General Training Hyperparameters
+training:
+  batch_size: 8
+  learning_rate: 2e-5
+  epochs: 5
+  weight_decay: 0.01
+  gradient_accumulation_steps: 2
+  fp16: true
+  early_stopping_patience: 3
+  checkpoint_dir: "experiments"
+
+# Parameter-Efficient Fine-Tuning Configurations
+peft:
+  lora:
+    r: 8
+    alpha: 16
+    dropout: 0.1
+    target_modules:
+      - "query"
+      - "value"
+  qlora:
+    r: 8
+    alpha: 16
+    dropout: 0.1
+    target_modules:
+      - "query"
+      - "value"
+    load_in_4bit: true
+    bnb_4bit_compute_dtype: "float16"
+    bnb_4bit_quant_type: "nf4"
+    bnb_4bit_use_double_quant: true
+  adapters:
+    bottleneck_dim: 64
+    non_linearity: "relu"
+    adapter_dropout: 0.1
