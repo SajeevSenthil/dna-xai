@@ -1,6 +1,6 @@
 import logging
 import numpy as np
-from typing import List, Dict, Any, Tuple, Set
+from typing import List, Dict, Any, Tuple, Set, Optional
 
 logger = logging.getLogger(__name__)
 
@@ -69,7 +69,7 @@ def identify_important_regions(
             "end": end_pos,
             "sequence": sub_seq,
             "mean_score": mean_score,
-            "indices": r.tolist()
+            "indices": r
         })
         
     # Sort regions by absolute score descending

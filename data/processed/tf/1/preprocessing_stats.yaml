@@ -1,0 +1,10 @@
+class_ratio_pos_neg: 1.0000612182430364
+duplicate_sequences_removed: 1
+final_samples: 32671
+initial_samples: 32672
+invalid_sequences_removed: 0
+max_length: 101
+mean_length: 101.0
+min_length: 101
+negative_samples: 16335
+positive_samples: 16336

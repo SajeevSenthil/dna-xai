@@ -34,7 +34,6 @@ env.bak/
 venv.bak/
 
 # Project specific exclusions
-data/processed/
 experiments/
 results/metrics/
 results/plots/

@@ -1,0 +1,89 @@
+[2026-08-14 14:21:13] INFO [root:32] Logging configured successfully.
+[2026-08-14 14:21:13] INFO [__main__:21] Initializing Data Preparation Pipeline...
+[2026-08-14 14:22:05] INFO [src.utils.seed:29] Random seed set to 42 (reproducibility enabled).
+[2026-08-14 14:22:05] INFO [__main__:36] =========================================
+[2026-08-14 14:22:05] INFO [__main__:37] PROCESSING TASK: PROMOTER PREDICTION
+[2026-08-14 14:22:05] INFO [__main__:38] =========================================
+[2026-08-14 14:22:05] INFO [__main__:48] Loading raw promoter files from: project dataset/prom_core_all
+[2026-08-14 14:22:05] INFO [__main__:53]   Loaded train.csv: 47356 samples
+[2026-08-14 14:22:05] INFO [__main__:53]   Loaded dev.csv: 5920 samples
+[2026-08-14 14:22:05] INFO [__main__:53]   Loaded test.csv: 5920 samples
+[2026-08-14 14:22:05] INFO [__main__:58] Total merged promoter samples: 59196
+[2026-08-14 14:22:05] INFO [src.data.preprocessing:77] Preprocessing completed. Initial: 59196, Final: 58934, Removed: 262 (Invalid: 0, Dupes: 262)
+[2026-08-14 14:22:05] INFO [src.data.preprocessing:79] Class distribution - Positives: 29419, Negatives: 29515, Ratio: 0.997
+[2026-08-14 14:22:05] INFO [src.data.preprocessing:80] Sequence length stats - Min: 70, Max: 70, Mean: 70.0
+[2026-08-14 14:22:05] INFO [src.data.splitting:59] Splits created successfully (seed=42):
+[2026-08-14 14:22:05] INFO [src.data.splitting:60]   Train:      47148 samples (80.0%)
+[2026-08-14 14:22:05] INFO [src.data.splitting:61]   Validation: 5893 samples (10.0%)
+[2026-08-14 14:22:05] INFO [src.data.splitting:62]   Test:       5893 samples (10.0%)
+[2026-08-14 14:22:06] INFO [__main__:81] Processed promoter data saved to: data/processed/promoter
+[2026-08-14 14:22:06] INFO [__main__:86] =========================================
+[2026-08-14 14:22:06] INFO [__main__:87] PROCESSING TASK: TFBS PREDICTION
+[2026-08-14 14:22:06] INFO [__main__:88] =========================================
+[2026-08-14 14:22:06] INFO [__main__:96] Found TFBS subdirectories: ['0', '1', '2', '3', '4']
+[2026-08-14 14:22:06] INFO [__main__:105] Processing TFBS subdirectory '0'...
+[2026-08-14 14:22:06] INFO [__main__:112]   Loaded 0/train.csv: 32378 samples
+[2026-08-14 14:22:06] INFO [__main__:112]   Loaded 0/dev.csv: 1000 samples
+[2026-08-14 14:22:06] INFO [__main__:112]   Loaded 0/test.csv: 1000 samples
+[2026-08-14 14:22:06] INFO [__main__:116] Total merged TFBS/0 samples: 34378
+[2026-08-14 14:22:06] INFO [src.data.preprocessing:77] Preprocessing completed. Initial: 34378, Final: 34369, Removed: 9 (Invalid: 0, Dupes: 9)
+[2026-08-14 14:22:06] INFO [src.data.preprocessing:79] Class distribution - Positives: 17189, Negatives: 17180, Ratio: 1.001
+[2026-08-14 14:22:06] INFO [src.data.preprocessing:80] Sequence length stats - Min: 101, Max: 101, Mean: 101.0
+[2026-08-14 14:22:06] INFO [src.data.splitting:59] Splits created successfully (seed=42):
+[2026-08-14 14:22:06] INFO [src.data.splitting:60]   Train:      27497 samples (80.0%)
+[2026-08-14 14:22:06] INFO [src.data.splitting:61]   Validation: 3436 samples (10.0%)
+[2026-08-14 14:22:06] INFO [src.data.splitting:62]   Test:       3436 samples (10.0%)
+[2026-08-14 14:22:06] INFO [__main__:138] Processed TFBS/0 data saved to: data/processed/tf\0
+[2026-08-14 14:22:06] INFO [__main__:105] Processing TFBS subdirectory '1'...
+[2026-08-14 14:22:06] INFO [__main__:112]   Loaded 1/train.csv: 30672 samples
+[2026-08-14 14:22:06] INFO [__main__:112]   Loaded 1/dev.csv: 1000 samples
+[2026-08-14 14:22:06] INFO [__main__:112]   Loaded 1/test.csv: 1000 samples
+[2026-08-14 14:22:06] INFO [__main__:116] Total merged TFBS/1 samples: 32672
+[2026-08-14 14:22:06] INFO [src.data.preprocessing:77] Preprocessing completed. Initial: 32672, Final: 32671, Removed: 1 (Invalid: 0, Dupes: 1)
+[2026-08-14 14:22:06] INFO [src.data.preprocessing:79] Class distribution - Positives: 16336, Negatives: 16335, Ratio: 1.000
+[2026-08-14 14:22:06] INFO [src.data.preprocessing:80] Sequence length stats - Min: 101, Max: 101, Mean: 101.0
+[2026-08-14 14:22:06] INFO [src.data.splitting:59] Splits created successfully (seed=42):
+[2026-08-14 14:22:06] INFO [src.data.splitting:60]   Train:      26137 samples (80.0%)
+[2026-08-14 14:22:06] INFO [src.data.splitting:61]   Validation: 3267 samples (10.0%)
+[2026-08-14 14:22:06] INFO [src.data.splitting:62]   Test:       3267 samples (10.0%)
+[2026-08-14 14:22:06] INFO [__main__:138] Processed TFBS/1 data saved to: data/processed/tf\1
+[2026-08-14 14:22:06] INFO [__main__:105] Processing TFBS subdirectory '2'...
+[2026-08-14 14:22:06] INFO [__main__:112]   Loaded 2/train.csv: 19000 samples
+[2026-08-14 14:22:06] INFO [__main__:112]   Loaded 2/dev.csv: 1000 samples
+[2026-08-14 14:22:06] INFO [__main__:112]   Loaded 2/test.csv: 1000 samples
+[2026-08-14 14:22:06] INFO [__main__:116] Total merged TFBS/2 samples: 21000
+[2026-08-14 14:22:06] INFO [src.data.preprocessing:77] Preprocessing completed. Initial: 21000, Final: 20795, Removed: 205 (Invalid: 0, Dupes: 205)
+[2026-08-14 14:22:06] INFO [src.data.preprocessing:79] Class distribution - Positives: 10300, Negatives: 10495, Ratio: 0.981
+[2026-08-14 14:22:06] INFO [src.data.preprocessing:80] Sequence length stats - Min: 101, Max: 101, Mean: 101.0
+[2026-08-14 14:22:06] INFO [src.data.splitting:59] Splits created successfully (seed=42):
+[2026-08-14 14:22:06] INFO [src.data.splitting:60]   Train:      16637 samples (80.0%)
+[2026-08-14 14:22:06] INFO [src.data.splitting:61]   Validation: 2079 samples (10.0%)
+[2026-08-14 14:22:06] INFO [src.data.splitting:62]   Test:       2079 samples (10.0%)
+[2026-08-14 14:22:06] INFO [__main__:138] Processed TFBS/2 data saved to: data/processed/tf\2
+[2026-08-14 14:22:06] INFO [__main__:105] Processing TFBS subdirectory '3'...
+[2026-08-14 14:22:07] INFO [__main__:112]   Loaded 3/train.csv: 27294 samples
+[2026-08-14 14:22:07] INFO [__main__:112]   Loaded 3/dev.csv: 1000 samples
+[2026-08-14 14:22:07] INFO [__main__:112]   Loaded 3/test.csv: 1000 samples
+[2026-08-14 14:22:07] INFO [__main__:116] Total merged TFBS/3 samples: 29294
+[2026-08-14 14:22:07] INFO [src.data.preprocessing:77] Preprocessing completed. Initial: 29294, Final: 29271, Removed: 23 (Invalid: 0, Dupes: 23)
+[2026-08-14 14:22:07] INFO [src.data.preprocessing:79] Class distribution - Positives: 14647, Negatives: 14624, Ratio: 1.002
+[2026-08-14 14:22:07] INFO [src.data.preprocessing:80] Sequence length stats - Min: 101, Max: 101, Mean: 101.0
+[2026-08-14 14:22:07] INFO [src.data.splitting:59] Splits created successfully (seed=42):
+[2026-08-14 14:22:07] INFO [src.data.splitting:60]   Train:      23417 samples (80.0%)
+[2026-08-14 14:22:07] INFO [src.data.splitting:61]   Validation: 2927 samples (10.0%)
+[2026-08-14 14:22:07] INFO [src.data.splitting:62]   Test:       2927 samples (10.0%)
+[2026-08-14 14:22:07] INFO [__main__:138] Processed TFBS/3 data saved to: data/processed/tf\3
+[2026-08-14 14:22:07] INFO [__main__:105] Processing TFBS subdirectory '4'...
+[2026-08-14 14:22:07] INFO [__main__:112]   Loaded 4/train.csv: 19000 samples
+[2026-08-14 14:22:07] INFO [__main__:112]   Loaded 4/dev.csv: 1000 samples
+[2026-08-14 14:22:07] INFO [__main__:112]   Loaded 4/test.csv: 1000 samples
+[2026-08-14 14:22:07] INFO [__main__:116] Total merged TFBS/4 samples: 21000
+[2026-08-14 14:22:07] INFO [src.data.preprocessing:77] Preprocessing completed. Initial: 21000, Final: 16850, Removed: 4150 (Invalid: 0, Dupes: 4150)
+[2026-08-14 14:22:07] INFO [src.data.preprocessing:79] Class distribution - Positives: 6351, Negatives: 10499, Ratio: 0.605
+[2026-08-14 14:22:07] INFO [src.data.preprocessing:80] Sequence length stats - Min: 101, Max: 101, Mean: 101.0
+[2026-08-14 14:22:07] INFO [src.data.splitting:59] Splits created successfully (seed=42):
+[2026-08-14 14:22:07] INFO [src.data.splitting:60]   Train:      13480 samples (80.0%)
+[2026-08-14 14:22:07] INFO [src.data.splitting:61]   Validation: 1685 samples (10.0%)
+[2026-08-14 14:22:07] INFO [src.data.splitting:62]   Test:       1685 samples (10.0%)
+[2026-08-14 14:22:07] INFO [__main__:138] Processed TFBS/4 data saved to: data/processed/tf\4
+[2026-08-14 14:22:07] INFO [__main__:142] Data preparation completed successfully.
