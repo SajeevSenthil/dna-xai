@@ -1,0 +1,24 @@
+[2026-10-14 16:20:15] INFO [root:32] Logging configured successfully.
+[2026-10-14 16:20:15] INFO [__main__:73] Starting training run: Task=TF, Method=FULL
+[2026-10-14 16:20:15] INFO [src.utils.seed:29] Random seed set to 42 (reproducibility enabled).
+[2026-10-14 16:20:15] INFO [__main__:84] Using compute device: cuda
+[2026-10-14 16:20:15] INFO [__main__:103] Loaded train samples: 16637 | val samples: 2079
+[2026-10-14 16:20:15] INFO [src.models.dnabert:35] Loading DNABERT-2 from: quietflamingo/dnabert2-no-flashattention
+[2026-10-14 16:20:16] INFO [src.models.dnabert:54] DNABERT-2 model and tokenizer loaded successfully.
+[2026-10-14 16:20:16] INFO [src.models.classifier:37] Initialized DNABERT2Classifier with pooling=mean, dropout=0.1, hidden_size=768, num_labels=2
+[2026-10-14 16:20:16] INFO [src.training.train:53] Trainer initialization:
+[2026-10-14 16:20:16] INFO [src.training.train:54]   Total parameters:     117,070,082
+[2026-10-14 16:20:16] INFO [src.training.train:55]   Trainable parameters: 117,070,082 (100.000%)
+[2026-10-14 16:20:16] INFO [src.training.train:174] Starting training loop...
+[2026-10-14 16:23:59] INFO [src.training.train:196] Epoch 01 completed in 223.2s | Train Loss: 0.5168 | Val Loss: 0.4506 | Val F1: 0.8062 | Val AUROC: 0.8778 | Peak VRAM: 2344.4 MB
+[2026-10-14 16:24:01] INFO [src.training.train:220]   => Saved new best model to D:/dna-work/experiments\tf_2_full.pt (Val F1: 0.8062)
+[2026-10-14 16:27:44] INFO [src.training.train:196] Epoch 02 completed in 222.7s | Train Loss: 0.3972 | Val Loss: 0.5022 | Val F1: 0.7454 | Val AUROC: 0.8807 | Peak VRAM: 2344.4 MB
+[2026-10-14 16:27:44] INFO [src.training.train:223]   => Validation F1 did not improve. (Patience: 1/3)
+[2026-10-14 16:31:47] INFO [src.training.train:196] Epoch 03 completed in 243.4s | Train Loss: 0.2992 | Val Loss: 0.5827 | Val F1: 0.7875 | Val AUROC: 0.8756 | Peak VRAM: 2344.4 MB
+[2026-10-14 16:31:47] INFO [src.training.train:223]   => Validation F1 did not improve. (Patience: 2/3)
+[2026-10-14 16:35:37] INFO [src.training.train:196] Epoch 04 completed in 230.0s | Train Loss: 0.2177 | Val Loss: 0.6098 | Val F1: 0.8078 | Val AUROC: 0.8741 | Peak VRAM: 2344.4 MB
+[2026-10-14 16:35:39] INFO [src.training.train:220]   => Saved new best model to D:/dna-work/experiments\tf_2_full.pt (Val F1: 0.8078)
+[2026-10-14 16:39:34] INFO [src.training.train:196] Epoch 05 completed in 234.6s | Train Loss: 0.1696 | Val Loss: 0.7391 | Val F1: 0.7893 | Val AUROC: 0.8637 | Peak VRAM: 2344.4 MB
+[2026-10-14 16:39:34] INFO [src.training.train:223]   => Validation F1 did not improve. (Patience: 1/3)
+[2026-10-14 16:39:34] INFO [src.training.train:231] Training finished in 1157.3s. Best Epoch: 4 (Val F1: 0.8078)
+[2026-10-14 16:39:34] INFO [__main__:157] Training run completed. Efficiency statistics saved to: D:/dna-work/experiments\full\tf_2_efficiency_stats.json

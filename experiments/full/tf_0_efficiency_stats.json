@@ -1,0 +1,9 @@
+{
+    "best_epoch": 0,
+    "best_val_f1": 0.8177777777777778,
+    "training_duration_sec": 1747.9180035591125,
+    "peak_gpu_memory_mb": 2346.2119140625,
+    "total_parameters": 117070082,
+    "trainable_parameters": 117070082,
+    "trainable_percentage": 100.0
+}

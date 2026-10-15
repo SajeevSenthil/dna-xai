@@ -6,6 +6,7 @@ from transformers import AutoModel, BitsAndBytesConfig
 from peft import get_peft_model, LoraConfig, prepare_model_for_kbit_training
 
 from .classifier import DNABERT2Classifier
+from .dnabert import load_dnabert_encoder
 
 logger = logging.getLogger(__name__)
 
@@ -92,13 +93,13 @@ def get_peft_classifier(
     
     if method == "full":
         # Load standard model
-        encoder = AutoModel.from_pretrained(model_name_or_path, trust_remote_code=True)
+        encoder = load_dnabert_encoder(model_name_or_path)
         classifier = DNABERT2Classifier(encoder, num_labels=num_labels, dropout=dropout, pooling=pooling)
         return classifier
         
     elif method == "lora":
         # Load standard encoder
-        encoder = AutoModel.from_pretrained(model_name_or_path, trust_remote_code=True)
+        encoder = load_dnabert_encoder(model_name_or_path)
         
         # Configure LoRA
         r = peft_config_dict.get("r", 8)
@@ -139,11 +140,7 @@ def get_peft_classifier(
             bnb_4bit_use_double_quant=True
         )
         
-        encoder = AutoModel.from_pretrained(
-            model_name_or_path,
-            quantization_config=bnb_config,
-            trust_remote_code=True
-        )
+        encoder = load_dnabert_encoder(model_name_or_path, quantization_config=bnb_config)
         
         # Prepare model for k-bit training
         encoder = prepare_model_for_kbit_training(encoder, use_gradient_checkpointing=False)
@@ -171,7 +168,7 @@ def get_peft_classifier(
         
     elif method == "adapters":
         # Load standard model
-        encoder = AutoModel.from_pretrained(model_name_or_path, trust_remote_code=True)
+        encoder = load_dnabert_encoder(model_name_or_path)
         
         # Freeze base encoder parameters
         for param in encoder.parameters():

@@ -14,8 +14,18 @@ except Exception:
     pass
 
 from transformers import AutoTokenizer, AutoModel
+from transformers.models.bert.configuration_bert import BertConfig
 
 logger = logging.getLogger(__name__)
+
+def load_dnabert_encoder(model_name_or_path: str, **kwargs) -> Any:
+    """
+    Loads the DNABERT-2 encoder with an explicit BertConfig (workaround recommended in the
+    DNABERT-2 README) to avoid the config_class mismatch raised by AutoModel when the
+    remote-code config has already been registered (e.g. by loading the tokenizer first).
+    """
+    config = BertConfig.from_pretrained(model_name_or_path)
+    return AutoModel.from_pretrained(model_name_or_path, trust_remote_code=True, config=config, **kwargs)
 
 def load_dnabert_base(model_name_or_path: str = "zhihan1996/DNABERT-2-117M") -> Tuple[Any, Any]:
     """
@@ -36,10 +46,7 @@ def load_dnabert_base(model_name_or_path: str = "zhihan1996/DNABERT-2-117M") -> 
 
     # Load model
     try:
-        model = AutoModel.from_pretrained(
-            model_name_or_path, 
-            trust_remote_code=True
-        )
+        model = load_dnabert_encoder(model_name_or_path)
     except Exception as e:
         logger.error(f"Failed to load model from {model_name_or_path}: {e}")
         raise e
